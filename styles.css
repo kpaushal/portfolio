@@ -541,6 +541,34 @@ a {
   gap: 1.5rem;
 }
 
+.projects-list {
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  max-height: 920px;
+}
+
+.projects-list.collapsed {
+  max-height: 760px;
+}
+
+.projects-list.collapsed .card:nth-child(n+3) {
+  display: none;
+}
+
+.projects-list.expanded {
+  max-height: 2400px;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.project-toggle {
+  min-width: 220px;
+}
+
 .cards-grid.single {
   grid-template-columns: minmax(0, 1fr);
 }
